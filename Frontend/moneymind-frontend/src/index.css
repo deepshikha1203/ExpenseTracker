@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* INPUT */
+input[type="date"] {
+  font-size: 16px;
+}
+
+/* CALENDAR BASE */
+.react-calendar {
+  width: 100% !important;
+  height: 100% !important;
+   max-width: 100% !important;
+  border: none;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+/* WEEKDAY HEADINGS (MON, TUE...) */
+.react-calendar__month-view__weekdays {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* ALL DATES */
+.react-calendar__tile {
+height: 70px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+/* REMOVE DEFAULT WEEKEND COLOR */
+.react-calendar__month-view__days__day--weekend {
+  color: #374151;
+}
+
+/* ONLY SUNDAY RED */
+.react-calendar__month-view__days__day:nth-child(7n) {
+  color: #ef4444;
+}
+
+/* HOVER → GREEN */
+.react-calendar__tile:hover {
+  background: #22c55e !important;
+  color: white !important;
+}
+
+/* SELECTED DATE (PURPLE) */
+.react-calendar__tile--active {
+  background: linear-gradient(135deg, #7c3aed, #6366f1) !important;
+  color: white !important;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.4);
+  transform: scale(1.05);
+}
+.react-calendar__tile--active:hover {
+  background: linear-gradient(135deg, #7c3aed, #6366f1) !important;
+  color: white !important;
+}
+
+/* EXPENSE HIGHLIGHT */
+.highlight-date {
+  background: #7c3aed !important;
+  color: white !important;
+  border-radius: 12px;
+}
+
+.highlight-date:hover {
+  background: #6d28d9 !important;
+}
+.react-calendar__tile:hover {
+  background: #22c55e !important;   /* green */
+  color: white !important;
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+.react-calendar__tile:hover:not(.react-calendar__tile--active) {
+  background: #22c55e !important;
+  color: white;
+}
+.react-datepicker {
+  font-size: 1.1rem !important;
+}
+
+.react-datepicker__month {
+  transform: scale(1.3);
+}
